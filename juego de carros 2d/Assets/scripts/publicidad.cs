@@ -23,6 +23,8 @@ public class publicidad : MonoBehaviour
 	public Text textTiempoRevivir;
 	public  float TiempoRevivir;
 
+	public gasolina gasolina; 
+
 	void Start()
 	{
 		Advertisement.Initialize ("1699127", false);
@@ -72,8 +74,10 @@ public class publicidad : MonoBehaviour
 			textMetros.CrossFadeAlpha (0, 0, false);
 			consolaMotor.clip = motor;
 			consolaMotor.Play ();
-			sControladorCoche.TerminoTiempo =true;
+			sControladorCoche.TerminoTiempo = true;
 			sVelocidad.VelocidadCarretera = -13;
+
+			gasolina.GetComponent<gasolina> ().sliderGasolina.value = 1;
 
 			Debug.Log ("entro");
 			break;

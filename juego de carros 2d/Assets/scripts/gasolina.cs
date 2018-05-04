@@ -8,6 +8,9 @@ public class gasolina : MonoBehaviour {
 	public Slider sliderGasolina;
 	[SerializeField]
 	ControladorCoche scontroladorCoche;
+
+
+
 	// Use this for initialization
 	void Start () {
 		sliderGasolina = GameObject.FindGameObjectWithTag("ui").GetComponent<Slider> ();
@@ -16,12 +19,12 @@ public class gasolina : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(scontroladorCoche.TerminoJuego == false)
-    {
+		if (scontroladorCoche.TerminoJuego == false) {
 			
-	//	sliderGasolina.value -= 0.05f * Time.deltaTime;
+			sliderGasolina.value -= 0.05f * Time.deltaTime;
 
-	}
+		} 
+
 
 
 }
